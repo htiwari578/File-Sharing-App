@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    
+    
+    input[type=submit] {
+  width: 20%;
+  background-color: #2a47a7;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+    input[type=file] {
+  width: 17%;
+  background-color: #2a47a7;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.alert{
+    color: red;
+}
+
+    </style>
+
+<body>
+    <form action="<%= process.env.APP_BASE_URL %>/api/files" method="post" enctype="multipart/form-data">
+        <h1>Hi,</h1>
+        <h3>This is a file Sharing app</h3>
+        <label for="myfile">Choose a document to upload: </label><br>
+        <input type="file" name="myfile" id="myfile"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p class="alert">Shared files will expire in 2 days.</p>
+</body>
+</html>
